@@ -145,7 +145,7 @@ main {
 
 }
 
-@media (max-width: 1200px) and (min-width: 800px){
+@media (max-width: 1200px) and (min-width: 801px){
     header {
         display: inline-block;
     }
@@ -177,7 +177,12 @@ main {
 @media (max-width: 800px) {
     header {
         flex-direction: column;
+        margin: auto 5%;
     }
+    .about-me {
+        font-size: 12px;
+    }
+
 }
 
 @keyframes typing {
