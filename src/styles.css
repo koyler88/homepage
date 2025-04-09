@@ -1,0 +1,197 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #4c5c68;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    background-color: #C5C3C6;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50%;
+    transform: translate(-50%);
+}
+
+.welcome, .introduction {
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: typing 3.5s steps(40, end);
+    font-family: cursive, sans-serif;
+    font-weight: bold;
+    justify-self: center;
+    animation-fill-mode: forwards;
+}
+
+.welcome {
+    animation-delay: 3.5s;
+    visibility: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    margin: auto 10em;
+}
+
+.pfp-container {
+    max-width: 250px;
+    margin: 5% auto;
+    position: relative;
+    display: inline-block;
+}
+
+.profile-picture {
+    max-width: 100%;
+    box-shadow: 0px 4px 10px black;
+}
+
+.about-me {
+    text-align: left;
+    margin: 10% auto;
+    background-color: lightgray;
+    box-shadow: 0px 4px 10px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.github {
+    align-self: end;
+}
+
+.github-img {
+    max-width: 100%;
+}
+
+.works-title {
+    justify-self: center;
+    margin: 1em;
+}
+
+
+footer {
+    position: relative;
+    bottom: 0;
+    text-align: center;
+    padding: 15px;
+    border-top: 0.5em dotted gray;
+}
+
+.projects {
+    display: grid;
+    list-style-type: none;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 10%;
+}
+
+
+.project-container {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    width: 80%;
+}
+
+.project-description {
+    padding: 1em;
+}
+
+a {
+    width: 2rem;
+}
+
+.links {
+    display: flex;
+    gap: 15px;
+}
+
+.title-links {
+    display: flex;
+    padding: 1em;
+    justify-content: space-between;
+}
+
+
+main {
+    flex: 1;
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 1200px) and (min-width: 800px){
+    header {
+        display: inline-block;
+    }
+    .pfp-container {
+        float: left;
+        margin: 30px 0px 0px 50px;
+        padding-right: 30px;
+    }
+    .about-me {
+        display: block;
+        margin-top: 120px;
+        margin-left: 120px;
+        justify-content: space-between;
+        font-size: 20px;
+    }
+    .about-me * {
+        padding-bottom: 40px;
+    }
+    .github-img {
+        height: 60px;
+    }
+    .github {
+        float: right;
+        transform: translateY(-50%);
+        height: 10px;
+    }
+}
+
+@media (max-width: 800px) {
+    header {
+        flex-direction: column;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+        border-right: .1em solid gray;
+        visibility: visible;
+    }
+    99.9% {
+        border-right: .1em solid gray;
+    }
+    to {
+        width: 255px;
+        border: none;
+        visibility: visible;
+    }
+}
